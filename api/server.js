@@ -1,11 +1,11 @@
 // Utils
 const { db } = require('./utils/database');
-const dotenv = requiere('dotenv');
+const dotenv = require('dotenv');
 
 // Express app
 const { app } = require('./app');
 
-dotenv.config({ path: './env'});
+dotenv.config();
 
 db.sync()
 	.then(() => {
